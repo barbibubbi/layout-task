@@ -1,0 +1,85 @@
+@import '../core-variables/colors';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.currency-list {
+	background: rgba(0, 0, 0, 0.4);
+	min-width: 18rem;
+	max-width: 25rem;
+	height: 100%;
+	margin: 0 auto;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	top: 0px;
+	right: 0px;
+	&:after {
+		content: '';
+		width: .094rem;
+		height: 100%;
+		background-color: $color-primary;
+		position: absolute;
+		left: 6.04rem;
+		top: 0;
+	}
+
+	.currency-list__body {
+		display: flex;
+		flex-direction: column;
+		margin-left: 6.25rem;
+		border-radius: 0 .5rem .5rem 0;
+		padding: .5rem 0;
+
+		.currency-list__item {
+			position: relative;
+
+			&:after {
+				content: '';
+				width: 1px;
+				height: 1px;
+				border-radius: 50%;
+				border: .18rem solid $color-primary;
+				background-color: $color-primary;
+				position: absolute;
+				left: -.4rem;
+				top: .5rem;
+			}
+			.currency-list__currency {
+				position: absolute;
+				left: -4rem;
+				top: 0;
+				font-size: 1rem;
+				color: $color-primary;
+			}
+			.currency-list__content {
+				color: $color-primary;
+				margin-left: 1rem;
+
+				.title {
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+.currency-list__btn {
+	width: 100%;
+	min-width: 18rem;
+	max-width: 25rem;
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	background-color: $color-primary;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.3rem 1rem 1.3rem 1rem;
+}

@@ -1,0 +1,26 @@
+@import '../core-variables/colors';
+
+//standard for all future buttons
+@mixin btn-brand($btn-color) {
+	border: 0.125rem solid $btn-color;
+	background-color: $btn-color;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $btn-color + 30;
+		border: 0.125rem solid $btn-color + 30;
+	}
+}
+
+//standard for all buttons on forms
+.btn__form--submit {
+	color: $color-primary;
+	padding: 10px 0;
+	min-width: 18.125em;
+	font-weight: 600;
+	font-size: .8rem;
+	width: 10%;
+	border-radius: 2.815rem;
+	@include btn-brand($btn-color);
+	width: 100%;
+}

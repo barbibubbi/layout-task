@@ -1,0 +1,88 @@
+@import '../core-variables/colors';
+@import '../core-variables/fonts';
+
+.form {
+	margin: 0 .5rem;
+}
+
+.form__fieldset {
+	background-color: $color-primary;
+	border-width: thin;
+	border: .1px solid #d8d8d8;
+	margin: .7rem .3rem;
+	display: flex;
+	flex-direction: column;
+	padding: .5rem;
+	@media only screen and (min-width: 500px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.form__item {
+	width: 100%;
+	position: relative;
+	@media only screen and (min-width: 500px) {
+		padding: .29rem;
+	}
+	@media only screen and (min-width: 800px) {
+		padding: .3rem;
+	}
+}
+
+.form__select {
+	display: block;
+	font-size: 1rem;
+	font-family: $font-primary;
+	font-weight: 200;
+	color: $color-secondary;
+	line-height: 1;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	height: 2.1rem;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	border-radius: unset;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('https://ephraim-doorcounty.com/wp-content/uploads/intense-cache/icons/plugin/elusive/caret-down.svg');
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+
+	@media only screen and (min-width: 500px) {
+		height: 2.2rem;
+	}
+}
+
+.form__input {
+	display: block;
+	font-size: 1rem;
+	font-family: $font-primary;
+	font-weight: 200;
+	height: 2.1rem;
+	color: $color-secondary;
+	line-height: 1;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	border: .1px solid #aaa;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	@media only screen and (min-width: 500px) {
+		height: 2.2rem;
+	}
+}
+
+.form__label {
+	color: $color-tertiary;
+	padding: .3rem;
+	margin-bottom: .4rem;
+}
