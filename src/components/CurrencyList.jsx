@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 import '../styles/core-components/_currency-list.scss';
 
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY; //hides the API key in an .env file
+const API_KEY = process.env.REACT_APP_CURRENCY_API_KEY; //hides the API key in an .env file
 const api = `https://currencyapi.net/api/v1/rates?key=${API_KEY}`;
 
 class CurrencyList extends Component {
