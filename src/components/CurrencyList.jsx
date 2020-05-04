@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 import '../styles/core-components/_currency-list.scss';
 
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY; //hides the API key in an .env file
 const api = `https://currencyapi.net/api/v1/rates?key=${API_KEY}`;
 
 class CurrencyList extends Component {
@@ -16,7 +16,6 @@ class CurrencyList extends Component {
 		Axios.get(api).then((result) => {
 			let arr = [];
 			arr = Object.entries(result.data.rates).map(([ key, value ]) => [ key, value ]).splice(47, 15); //returns only 20 rates starting from EUR
-			console.log(arr);
 			this.setState({ rates: arr });
 		});
 	}
@@ -39,6 +38,7 @@ class CurrencyList extends Component {
 					</div>
 					<div className="currency-list__btn">
 						<span className="currency-list__continue">See all rates</span>
+						{/*used a solid icon as the one in the example is a premium benefit and I did not want to waste time finding an accurate one :)*/}
 						<FontAwesomeIcon icon={faChevronCircleRight} className="currency-list__svg" />
 					</div>
 				</div>
